@@ -10,4 +10,6 @@ count.txt
 .wrangler
 .output
 .vinxi
+routeTree.gen.ts
+package-lock.json
 todos.json

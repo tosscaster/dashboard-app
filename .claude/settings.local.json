@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh pr view:*)",
+      "Bash(git fetch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate README.md with project-specific content\n\n- Replace generic TanStack template with project overview\n- Change pnpm to npm throughout\n- Add tech stack, prerequisites, environment setup\n- Simplify project structure and commands\n- Link to CLAUDE.md and AGENT.md for detailed docs\n- Add database commands to AGENT.md quick reference\n- Add related documentation links to AGENT.md\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nFix SSR error: Missing getServerSnapshot\n\n- Add ssr: false to /demo/store route \\(TanStack Store\\)\n- Add ssr: false to /demo/db-chat route \\(TanStack React DB\\)\n\nThese routes use client-only hooks \\(useStore, useLiveQuery\\) that\ndon''t support server-side rendering without getServerSnapshot.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git mv:*)",
+      "Bash(npx tsc:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
