@@ -5,6 +5,7 @@ import { fullName, store } from '@/lib/demo-store'
 
 export const Route = createFileRoute('/demo/store')({
   component: DemoStore,
+  ssr: false,
 })
 
 function FirstName() {
