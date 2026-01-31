@@ -11,3 +11,6 @@ count.txt
 .output
 .vinxi
 todos.json
+package-lock.json
+drizzle
+routeTree.gen.ts

@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite dev --port 3000",
-    "build": "vite build",
+    "gen:i18n": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
+    "dev": "npm run gen:i18n && vite dev --port 3000",
+    "build": "npm run gen:i18n && vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "db:generate": "drizzle-kit generate",
