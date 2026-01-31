@@ -10,6 +10,11 @@ npm run dev           # Start development server
 npm run build         # Build for production
 npm test              # Run tests
 npm run check         # Format + lint + fix all
+
+# Database
+npm run db:generate   # Generate migrations
+npm run db:migrate    # Run migrations
+npm run db:push       # Push schema (dev)
 ```
 
 ## Before Making Changes
@@ -93,6 +98,11 @@ npx shadcn@latest add button
 2. Run `npm run db:generate`
 3. Run `npm run db:migrate`
 
+### Add an environment variable
+1. Add to `.env.local`
+2. Define schema in `src/env.js`
+3. Use `VITE_` prefix for client-side
+
 ## Do Not
 
 - Skip reading files before editing
@@ -114,3 +124,8 @@ Required variables in `.env.local`:
 - `DATABASE_URL` - PostgreSQL connection string
 - `BETTER_AUTH_URL` - App URL for auth
 - `BETTER_AUTH_SECRET` - Auth secret key
+
+## Related Documentation
+
+- [CLAUDE.md](./CLAUDE.md) - Detailed project documentation
+- [README.md](./README.md) - Getting started guide
