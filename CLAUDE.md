@@ -32,22 +32,22 @@ A full-stack React application built on **TanStack Start** - a modern meta-frame
 
 ```bash
 # Development
-pnpm dev              # Start dev server (port 3000)
-pnpm build            # Build for production
-pnpm preview          # Preview production build
+npm run dev           # Start dev server (port 3000)
+npm run build         # Build for production
+npm run preview       # Preview production build
 
 # Testing & Quality
-pnpm test             # Run tests (Vitest)
-pnpm lint             # Run ESLint
-pnpm format           # Run Prettier
-pnpm check            # Format + lint + fix all
+npm test              # Run tests (Vitest)
+npm run lint          # Run ESLint
+npm run format        # Run Prettier
+npm run check         # Format + lint + fix all
 
 # Database (Drizzle)
-pnpm db:generate      # Generate migrations from schema changes
-pnpm db:migrate       # Run pending migrations
-pnpm db:push          # Push schema directly to database (dev)
-pnpm db:pull          # Pull schema from database
-pnpm db:studio        # Open Drizzle Studio GUI
+npm run db:generate   # Generate migrations from schema changes
+npm run db:migrate    # Run pending migrations
+npm run db:push       # Push schema directly to database (dev)
+npm run db:pull       # Pull schema from database
+npm run db:studio     # Open Drizzle Studio GUI
 ```
 
 ## Project Structure
@@ -165,7 +165,7 @@ Root configs:
 ### Database
 - Define tables in `src/db/schema.ts` using Drizzle's `pgTable`
 - Import `db` from `@/db` for queries
-- Run `pnpm db:generate` after schema changes, then `pnpm db:migrate`
+- Run `npm run db:generate` after schema changes, then `npm run db:migrate`
 
 ### Environment Variables
 - Use `@t3-oss/env-core` for type-safe env validation
@@ -192,7 +192,7 @@ VITE_APP_TITLE=       # App title (client-side)
 ## Testing
 
 - **Framework**: Vitest with React Testing Library
-- **Run**: `pnpm test`
+- **Run**: `npm test`
 - **Location**: Place tests next to source files (`*.test.ts(x)`) or in `__tests__/` directories
 - **Environment**: JSDOM for DOM simulation
 
@@ -230,8 +230,8 @@ Create file in `src/routes/` - filename becomes the URL path:
 
 ### New Database Table
 1. Define table in `src/db/schema.ts`
-2. Run `pnpm db:generate`
-3. Run `pnpm db:migrate`
+2. Run `npm run db:generate`
+3. Run `npm run db:migrate`
 
 ### New UI Component (shadcn)
 ```bash
@@ -249,7 +249,7 @@ Components are installed to `src/components/ui/` with new-york style and zinc ba
 ### Database connection errors
 - Verify `DATABASE_URL` in `.env.local`
 - Ensure PostgreSQL is running
-- Run `pnpm db:push` for quick schema sync during development
+- Run `npm run db:push` for quick schema sync during development
 
 ### Auth not working
 - Generate secret: `npx @better-auth/cli secret`
@@ -257,7 +257,7 @@ Components are installed to `src/components/ui/` with new-york style and zinc ba
 - Check `/api/auth/$` route is present
 
 ### Type errors after schema changes
-- Run `pnpm db:generate` to update types
+- Run `npm run db:generate` to update types
 - Restart TypeScript server in your editor
 
 ### Environment variable errors
